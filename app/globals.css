@@ -1,0 +1,55 @@
+:root {
+  --fundo: #0f1419; --painel: #171e26; --painel2: #1e2731; --borda: #2a3541; --texto: #e6edf3;
+  --suave: #8b98a5; --azul: #4ea1ff; --verde: #3fb950; --amarelo: #d29922; --vermelho: #f85149; --roxo: #a371f7;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--fundo); color: var(--texto); font: 14px/1.45 "Segoe UI", system-ui, sans-serif; }
+a { color: var(--azul); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.topo { display: flex; align-items: center; gap: 20px; padding: 12px 24px; background: var(--painel); border-bottom: 1px solid var(--borda); position: sticky; top: 0; z-index: 5; }
+.topo strong { font-size: 16px; margin-right: 12px; }
+.topo nav { display: flex; gap: 16px; flex: 1; }
+.conteudo { max-width: 1400px; margin: 0 auto; padding: 20px 24px 60px; }
+h1 { font-size: 20px; margin: 4px 0 16px; }
+h2 { font-size: 16px; margin: 20px 0 10px; }
+h3 { font-size: 14px; margin: 0 0 8px; }
+.caixa { background: var(--painel); border: 1px solid var(--borda); border-radius: 10px; padding: 16px; margin-bottom: 16px; }
+.grade { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); }
+.cartao { background: var(--painel2); border: 1px solid var(--borda); border-radius: 10px; padding: 12px 14px; }
+.cartao .n { font-size: 24px; font-weight: 600; }
+.cartao .l { color: var(--suave); font-size: 12px; }
+.btn { background: var(--painel2); color: var(--texto); border: 1px solid var(--borda); border-radius: 8px; padding: 8px 14px; cursor: pointer; font: inherit; }
+.btn:hover:not(:disabled) { border-color: var(--azul); }
+.btn:disabled { opacity: .5; cursor: default; }
+.btn.prim { background: var(--azul); border-color: var(--azul); color: #04121f; font-weight: 600; }
+.btn.ok { background: var(--verde); border-color: var(--verde); color: #04140a; font-weight: 600; }
+.btn.erro { background: transparent; border-color: var(--vermelho); color: var(--vermelho); }
+.btn.peq { padding: 4px 10px; font-size: 12px; }
+.linha { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+input, textarea, select { background: var(--fundo); color: var(--texto); border: 1px solid var(--borda); border-radius: 8px; padding: 8px 10px; font: inherit; }
+textarea { width: 100%; min-height: 120px; font-family: Consolas, monospace; font-size: 12px; }
+.abas { display: flex; gap: 4px; border-bottom: 1px solid var(--borda); margin-bottom: 16px; flex-wrap: wrap; }
+.abas button { background: none; border: none; color: var(--suave); padding: 10px 14px; cursor: pointer; font: inherit; border-bottom: 2px solid transparent; }
+.abas button.ativa { color: var(--texto); border-color: var(--azul); }
+.tabela { overflow: auto; max-height: 520px; border: 1px solid var(--borda); border-radius: 8px; }
+table { border-collapse: collapse; width: 100%; font-size: 12px; }
+th, td { padding: 6px 8px; border-bottom: 1px solid var(--borda); white-space: nowrap; text-align: left; max-width: 320px; overflow: hidden; text-overflow: ellipsis; }
+th { position: sticky; top: 0; background: var(--painel2); z-index: 1; }
+tr:hover td { background: #1b2430; }
+.suave { color: var(--suave); }
+.tag { display: inline-block; padding: 2px 8px; border-radius: 99px; font-size: 11px; border: 1px solid var(--borda); }
+.tag.pronta { color: var(--azul); border-color: var(--azul); }
+.tag.validada, .tag.ativa, .tag.ok { color: var(--verde); border-color: var(--verde); }
+.tag.com_erro, .tag.erro { color: var(--vermelho); border-color: var(--vermelho); }
+.tag.recebendo, .tag.pendente { color: var(--amarelo); border-color: var(--amarelo); }
+.tag.desativada { color: var(--suave); }
+.barra { height: 8px; background: var(--painel2); border-radius: 4px; overflow: hidden; }
+.barra > div { height: 100%; background: var(--amarelo); }
+.qualidade { display: grid; grid-template-columns: 170px 1fr 70px; gap: 6px 10px; align-items: center; font-size: 12px; }
+.regra { border: 1px solid var(--borda); border-radius: 8px; padding: 10px 12px; margin-bottom: 8px; background: var(--painel2); }
+.regra code { font-size: 12px; color: #c9d1d9; white-space: pre-wrap; }
+.aviso { padding: 10px 12px; border-radius: 8px; border: 1px solid var(--amarelo); color: var(--amarelo); margin: 8px 0; }
+.falha { padding: 10px 12px; border-radius: 8px; border: 1px solid var(--vermelho); color: var(--vermelho); margin: 8px 0; }
+.sucesso { padding: 10px 12px; border-radius: 8px; border: 1px solid var(--verde); color: var(--verde); margin: 8px 0; }
+.login { max-width: 360px; margin: 12vh auto; }
+pre.cmd { background: var(--fundo); border: 1px solid var(--borda); border-radius: 8px; padding: 10px; overflow: auto; font-size: 12px; }
